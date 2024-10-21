@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'BrooklynBold';
+    src: url(../fonts/Brooklyn-Bold-1.ttf);
+}
+
+@font-face {
+    font-family: 'BrooklynSemiBold';
+    src: url(../fonts/Brooklyn-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Blunt';
+    src: url(../fonts/SP-Blunt-Regular.otf);
+}
+
+.header-bg {
+    background: linear-gradient(180deg, #004A85 0%, #175F97 100%);
+}
+
+.search-input {
+    visibility: hidden;
+    opacity: 0;
+    max-width: 0px;
+    transition: all 0.5s ease;
+}
+
+.search-inputs-active {
+    visibility: visible;
+    opacity: 1;
+    max-width: 200px;
+}
+
+.dropdown-content {
+    position: absolute;
+    min-width: 160px;
+    background-color: white;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown-content-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-arrow {
+    transform: rotate(0);
+    transition: all 0.5s ease;
+}
+
+.dropdown-arrow-active {
+    transform: rotate(180deg);
+}
+
+.fold-bg {
+    background: linear-gradient(180deg, #165E96 50%, #FFF 100%);
+}
+
+.fold-wave {
+    background-image: url('../img/fold-wave.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.facts-bg {
+    background: linear-gradient(180deg, #F2F6FA 41%, #FFF 98%);
+}
+
+.focus-bg {
+    background: var(--Gradient, linear-gradient(115deg, #C0E3E8 48.3%, #FFF 100%));
+}
+
+.text-blue-stroke {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--P2, #0094A1);
+}
+
+.text-white-stroke {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFF;
+}
+
+.energize-boldy-bg {
+    background-image: url('../img/energize-boldy-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.swiper-slide-active {
+    transform: scale(1) !important;
+    transition: transform 0.3s ease;
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+    border-radius: 22px;
+    background: var(--P2, #0094A1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+}
+
+.everyday-bg {
+    background-image: url('../img/everyday-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.custom-vertical-swiper-button-next {
+    border-radius: 22px;
+    background: var(--P2, #0094A1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+}
+
+.made-simple-bg {
+    background: linear-gradient(180deg, #A6D9E0 27.43%, #FFF 100%);
+}
+
+.creatine-bg {
+    background-image: url('../img/creatine-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.arginine-bg {
+    background-image: url('../img/arginine-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-back {
+    background-color: #0094A1;
+    transform: rotateY(180deg);
+}
+
+.custom-blue-swiper-button-next {
+    border-radius: 22px;
+    background: var(--P2, #0094A1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+}
+
+.focus-intently-bg {
+    background: linear-gradient(326deg, #034764 16%, #0070A1 100%);
+}
+
+.recover-remarkably {
+    background: linear-gradient(326deg, #008CC9 16%, #69D1FF 100%);
+}
+
+.happy-container {
+    border-radius: 20.541px;
+    border: 2px solid var(--P2, #0094A1);
+    background: #FFF;
+}
+
+.custom-happy-swiper-button-next {
+    border-radius: 22px;
+    background: var(--P2, #0094A1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+}
+
+.custom-happy-swiper-button-prev {
+    border-radius: 22px;
+    background: var(--P2, #0094A1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+}
+
+.hover-text {
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+.hover-text::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: left 0.5s ease;
+}
+
+.hover-text:hover::before {
+    left: 0;
+}
+
+.container-width {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1248px) {
+    .container-width {
+        max-width: 1024px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-width {
+        max-width: 768px;
+    }
+
+    .search-inputs-active {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-width {
+        max-width: 640px;
+    }
+
+    .energize-boldy-bg {
+        background-image: url('../img/m-energize-boldy.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: top;
+    }
+
+    .everyday-bg {
+        background-position: left;
+    }
+}
+
+@media (max-width: 640px) {
+    .container-width {
+        max-width: 475px;
+    }
+}
+
+@media (max-width: 475px) {
+    .container-width {
+        width: 100%;
+        
+    }
+}
